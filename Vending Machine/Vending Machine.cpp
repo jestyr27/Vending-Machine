@@ -5,6 +5,7 @@
 #include <iostream>
 #include <iomanip>
 #include "VendingSlot.h"
+#include "VendingList.h"
 #include <string>
 using namespace std;
 
@@ -27,8 +28,9 @@ VendingSlot slot[MAX_SLOTS];
 bool buying = true;
 
 //prototypes
-int calcIndex(int input);
+int calcIndex();
 void getInput();
+int calcChange();
 
 //food symbols
 char one = int(185);
@@ -81,29 +83,9 @@ int _tmain(int argc, _TCHAR* argv[])
 {
 
 	
-	
-
-	
-
-	//Set each slot number
-	int slotCounter = 0;
-	for(int i = 0; i < MAX_ROWS; i ++)
-	{
-		for(int j = 0; i < MAX_COLUMNS; i++){
-			
-			slot[slotCounter].setSlotNumber((i*10) + j);
-			slotCounter++;
-		}
-	}
-
-
 
 
 	//Fill each slot with an item
-
-
-
-
 	while (buying == true){
 		getInput();
 		slotToGet = calcIndex();
@@ -112,4 +94,107 @@ int _tmain(int argc, _TCHAR* argv[])
 
 
 	return 0;
+}
+
+int calcChange() {
+	//enter variables
+
+	double moneySpent = 0.0;
+
+	double moneyIn = 0.0;
+
+	double change = 0.0;
+
+	int changeINT = 0;
+
+	int quarters = 0;
+
+	int dimes = 0;
+
+	int nickels = 0;
+
+	int pennies = 0;
+
+
+
+	//enter input
+
+	cout << "Enter money owed: $";
+
+	cin >> moneySpent;
+
+	cout << "Enter money paid: $";
+
+	cin >> moneyIn;
+
+	cout << endl;
+
+
+
+	//calculation
+
+	if (moneySpent > moneyIn)
+
+	{
+
+		cout << "The amount that was given is not enough, please pay the full amount.";
+
+		cout << endl;
+
+		cout << endl;
+
+	}
+
+	else
+
+	{
+
+		cout << fixed << setprecision(2);
+
+		change = moneyIn - moneySpent;
+		cout << change << endl;
+		changeINT = ceil(change * 100);
+		cout << changeINT << endl;
+		quarters = (changeINT / 25);
+
+		changeINT -= quarters * 25;
+		cout << changeINT << endl;
+		dimes = changeINT / 10;
+
+		changeINT -= dimes * 10;
+		cout << changeINT << endl;
+		nickels = changeINT / 05;
+
+		changeINT -= nickels * 05;
+
+		pennies = changeINT;
+
+
+
+
+		//display
+
+		cout << "Change due: $" << change << endl;
+
+		cout << "Quarters: " << quarters << endl;
+
+		cout << "Dimes: " << dimes << endl;
+
+		cout << "Nickles: " << nickels << endl;
+
+		cout << "Pennies: " << pennies << endl;
+
+		cout << endl;
+
+		cout << endl;
+
+	}
+
+
+
+	system("pause");
+
+	return 0;
+
+}
 }

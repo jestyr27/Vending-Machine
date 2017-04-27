@@ -79,6 +79,7 @@
   <ItemGroup>
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
+    <ClInclude Include="VendingList.h" />
     <ClInclude Include="VendingSlot.h" />
   </ItemGroup>
   <ItemGroup>
@@ -87,6 +88,7 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="Vending Machine.cpp" />
+    <ClCompile Include="VendingList.cpp" />
     <ClCompile Include="VendingSlot.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

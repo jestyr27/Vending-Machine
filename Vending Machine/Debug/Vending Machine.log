@@ -1,6 +1,10 @@
-﻿  stdafx.cpp
-  VendingSlot.cpp
-  Vending Machine.cpp
-  Generating Code...
-  Vending Machine.vcxproj -> C:\Users\admin\Downloads\Vending Machine-20170406T162735Z-001\Vending Machine\Debug\Vending Machine.exe
-  Vending Machine.vcxproj -> C:\Users\admin\Downloads\Vending Machine-20170406T162735Z-001\Vending Machine\Debug\Vending Machine.pdb (Full PDB)
+﻿  Vending Machine.cpp
+c:\users\admin\source\repos\v\vending-machine\vending machine\vending machine.cpp(36): warning C4309: 'initializing': truncation of constant value
+c:\users\admin\source\repos\v\vending-machine\vending machine\vending machine.cpp(41): error C2440: 'initializing': cannot convert from 'VendingList' to 'std::vector<VendingSlot,std::allocator<_Ty>>'
+          with
+          [
+              _Ty=VendingSlot
+          ]
+  c:\users\admin\source\repos\v\vending-machine\vending machine\vending machine.cpp(41): note: No constructor could take the source type, or constructor overload resolution was ambiguous
+c:\users\admin\source\repos\v\vending-machine\vending machine\vending machine.cpp(88): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+c:\users\admin\source\repos\v\vending-machine\vending machine\vending machine.cpp(166): warning C4018: '<': signed/unsigned mismatch
